@@ -1,8 +1,22 @@
 init_config:
+  # How offen to check in seconds
+  min_collection_interval: 21600
 
 instances:
-  - site: google.com
-  - site: yahoo.com
-  - site: amazon.com
-  - site: youtube.com
   - site: facebook.com
+    #  How many days before expire
+    thresholds:
+      critical: 7
+      warning: 14
+
+  - site: google.com
+    #  How many days before expire
+    thresholds:
+      critical: 15
+      warning: 30
+      
+  - site: microsoft.com
+    #  How many days before expire
+    thresholds:
+      critical: 1
+      warning: 2  
