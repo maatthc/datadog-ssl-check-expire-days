@@ -19,7 +19,7 @@ ATTENTION - The script will fail when it looks for the api_key but it can help i
 
 From the folder /opt/datadog-agent/agent, run
 ```shell
-PYTHONPATH=. /opt/datadog-agent/embedded/bin/python /etc/dd-agent/checks.d/ssl_check_expire_days.py
+PYTHONPATH="/opt/datadog-agent/agent/" /opt/datadog-agent/embedded/bin/python /etc/dd-agent/checks.d/ssl_check_expire_days.py
 ```
 ### Run as a DataDog Test
 It will show you some information about the Event contents and so on: 

@@ -60,6 +60,7 @@ class SSLCheckExpireDays(AgentCheck):
             'alert_type': level
         })
 
+# There is only here to make it easy to test/dev the Check outside the DataDog Agent Environment, e.g. from a IDE
 if __name__ == '__main__':
     check, instances = SSLCheckExpireDays.from_yaml('/etc/dd-agent/conf.d/ssl_check_expire_days.yaml')
     for instance in instances:
